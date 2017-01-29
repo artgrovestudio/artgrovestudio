@@ -1,0 +1,217 @@
+//Desktop navigation style
+
+$nav-transition-delay: .6s;
+
+.nav-desktop {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	height: 100%;
+	width: 200px;
+	background-color: $white-color;
+	transition: width $nav-transition-delay;
+	-webkit-box-shadow: 3px 0px 13px 6px rgba(0,0,0,0.29);
+	-moz-box-shadow: 3px 0px 13px 6px rgba(0,0,0,0.29);
+	box-shadow: 3px 0px 13px 6px rgba(0,0,0,0.29);
+
+	@include device('mobile') {
+ 		display: none;
+ 	}
+
+ 	.logo {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+
+		@include device('mobile') {
+	 		top: $global-padding-mobile;
+	 	}
+	 	@include device('tablet') {
+	 		top: $global-padding-tablet;
+	 	}
+	 	@include device('laptop') {
+	 		top: $global-padding-laptop;
+	 	}
+	 	@include device('desktop') {
+	 		top: $global-padding-desktop;
+	 	}
+	 	@include device('large-desktop') {
+	 		top: $global-padding-large-desktop;
+	 	}
+
+		a {
+			h1 {
+				display: inline;
+				text-align: center;
+				font-size: 30px;
+				font-weight: 900;
+				color: $black-color;
+				line-height: 30px;
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+
+ 	.hamburger {
+ 		position: absolute;
+ 		top: 50%;
+ 		left: 50%;
+ 		transform: translate(-50%, -50%);
+ 		cursor: pointer;
+ 		transition: left $nav-transition-delay;
+
+ 		&:hover {
+			.line {
+				background-color: $yellow-color;
+			}
+ 		}
+
+ 		.line {
+ 			height: 3px;
+ 			width: 40px;
+ 			background-color: $black-color;
+ 			margin-top: 8px;
+ 			transition: all $nav-transition-delay;
+ 		}
+
+ 		.line:nth-child(1) {
+ 			margin-top: 0;
+ 		}
+ 	}
+
+	.hamburger-open {
+		.line:nth-child(1) {
+			transform: translateY(11px) rotate(45deg);
+		}
+
+		.line:nth-child(2) {
+			opacity: 0;
+		}
+
+		.line:nth-child(3) {
+			transform: translateY(-11px) rotate(-45deg);
+		}
+	}
+
+	.nav-elements {
+		position: absolute;
+		top: 50%;
+		left: -140px;
+		transform: translateY(-50%);
+		opacity: 0;
+		transition: all $nav-transition-delay;
+		animation-timing-function: ease-in-out;
+
+		a {
+			color: $black-color;
+			text-decoration: none;
+			
+			p {
+				font-size: 26px;
+				font-weight: 900;
+				position: relative;
+
+				&:hover {
+					&::before {
+						width: 100%;
+					}
+				}			
+
+				&::before {
+					content: "";
+					width: 0%;
+					height: 4px;
+					position: absolute;
+					left: 0;
+					top: 60%;
+					transform: translateY(-50%);
+					background-color: $yellow-color;
+					transition: all .5s;
+				}							
+			}
+		}
+	}
+
+	.footer {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 20px;
+		width: 138px;
+
+		@include device('mobile') {
+	 		bottom: $global-padding-mobile;
+	 	}
+	 	@include device('tablet') {
+	 		bottom: $global-padding-tablet;
+	 	}
+	 	@include device('laptop') {
+	 		bottom: $global-padding-laptop;
+	 	}
+	 	@include device('desktop') {
+	 		bottom: $global-padding-desktop;
+	 	}
+	 	@include device('large-desktop') {
+	 		bottom: $global-padding-large-desktop;
+	 	}
+
+		a {
+			.icon {
+				float: left;
+				position: relative;
+				width: 20px;
+				height: 20px;
+				margin: 0 13px;
+				background-size: 100%;
+
+				&:hover {
+					&:before {						
+						left: 0px;						
+						width: 20px;												
+					}
+				}	
+
+				&:before {
+					content: "";
+					position: absolute;
+					left: -10px;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 14px;
+					height: 2px;
+					background-color: $black-color;
+
+					transition: all .25s;
+					animation-timing-function: ease-in-out;
+				}	
+			}
+
+			.instagram {				
+				background-image: url(../img/loader/instagram.png);
+			}
+
+			.twitter {				
+				background-image: url(../img/loader/twitter.png);
+			}
+
+			.behance {				
+				background-image: url(../img/loader/behance.png);
+			}
+		}	
+	}
+}
+
+.nav-desktop-open {
+	width: 350px;
+
+	.hamburger {
+		left: 50px;
+	}
+
+	.nav-elements-open {		
+		left: 100px;
+		opacity: 1;
+	}
+}

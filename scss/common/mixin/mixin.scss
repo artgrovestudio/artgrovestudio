@@ -1,0 +1,27 @@
+@mixin device($type) {
+  @if $type == 'iphone-5' {
+    @media only screen and (max-width: 320px) {
+      @content;
+    }
+  } @else if $type == 'mobile' {
+    @media only screen and (max-width: 769px) {
+      @content;
+    }
+  } @else if $type == 'tablet' {
+    @media only screen and (min-width: 769px) {
+      @content;
+    }
+  } @else if $type == 'laptop' {
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  } @else if $type == 'desktop' {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  } @else if $type == 'large-desktop' {
+    @media only screen and (min-width: 1600px) {
+      @content;
+    }
+  }
+}

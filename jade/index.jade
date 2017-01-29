@@ -1,0 +1,57 @@
+doctype html
+html
+	head
+		meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+		title Art Grove Studio
+		link(rel='shortcut icon', href='img/favicon.png', type='image/png')
+		meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+		meta(http-equiv='X-UA-Compatible' content='ie=edge')
+		meta(name='author', content='Savenok Oleg')
+		meta(name='keywords', content='web,design,js,site')
+		meta(name='Resource-type', content='Document')
+
+		// Style
+		link(rel='stylesheet', type='text/css', href='css/loader.css')
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+
+		// JQuery
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
+
+		// PagePilling
+		script(type='text/javascript', src='js/jquery.pagepiling.min.js')
+		
+		// Animate.css
+		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
+
+		// PagePilling Setting
+		script(type='text/javascript').
+			$(document).ready(function() {
+				$('#pagepiling').pagepiling({
+					direction: 'vertical',
+					anchors: ['strakhovskyi', 'module'],
+					navigation: false
+				});
+
+				$('.arrow-next').click(function () {
+					$.fn.pagepiling.moveSectionDown();
+				});
+			});
+
+	body#home
+		include includes/_loader.jade
+		include includes/_nav-desktop.jade
+		include includes/_nav-mobile.jade
+
+		#content
+			a.btn-line.contact(href='project.html')
+				p портфолио
+			.arrow-next
+				img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAZ0lEQVR4Ae3MMQ4CIRgF4Yn2JHBEzqUWnsflSLBhazYZWvNP+14+ov2i6EnirsTDM19+ZFYVGh9LvRmMSS2Zub1QVfp1P8hLplNhlyqCUVSjCMZSgnGUYBwlGEMJxlKCkVQliqJ/6wSw0UNZdSsg1gAAAABJRU5ErkJggg==")
+
+			include includes/_home.jade
+
+		// GSAP
+		script(src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js')
+		script(src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineMax.min.js')
+		script(src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js')
+		script(type='text/javascript', src='js/main.js')

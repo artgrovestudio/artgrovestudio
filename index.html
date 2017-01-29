@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Art Grove Studio</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Savenok Oleg">
+    <meta name="keywords" content="web,design,js,site">
+    <meta name="Resource-type" content="Document">
+    <!-- Style-->
+    <link rel="stylesheet" type="text/css" href="css/loader.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- JQuery-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <!-- PagePilling-->
+    <script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
+    <!-- Animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- PagePilling Setting-->
+    <script type="text/javascript">
+      $(document).ready(function() {
+      	$('#pagepiling').pagepiling({
+      		direction: 'vertical',
+      		anchors: ['strakhovskyi', 'module'],
+      		navigation: false
+      	});
+      
+      	$('.arrow-next').click(function () {
+      		$.fn.pagepiling.moveSectionDown();
+      	});
+      });
+      
+    </script>
+  </head>
+  <body id="home">
+    <div id="loader">
+      <div class="logo"><a href="http://artgrovestudio.com">
+          <h1>ag.studio</h1></a></div>
+      <div class="md-preloader">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="75" width="75" viewbox="0 0 75 75">
+          <circle cx="37.5" cy="37.5" r="33.5" stroke-width="4"></circle>
+        </svg>
+      </div>
+      <div class="social"><a href="https://www.instagram.com/art.grove.studio/">
+          <div class="icon instagram"></div></a><a href="https://twitter.com/ArtGroveStudio/">
+          <div class="icon twitter"></div></a><a href="https://www.behance.net/art_grove_studio/">
+          <div class="icon behance"></div></a></div>
+    </div>
+    <div class="nav-desktop">
+      <div class="logo"><a href="http://artgrovestudio.com">
+          <h1>ag.studio</h1></a></div>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="nav-elements"><a href="http://artgrovestudio.com">
+          <p>Главная</p></a><a href="about.html">
+          <p>О нас</p></a><a href="project.html">
+          <p>Работы</p></a><a href="contact.html">
+          <p>Контакты</p></a></div>
+      <div class="footer"> <a href="https://www.instagram.com/art.grove.studio/">
+          <div class="icon instagram"></div></a><a href="https://twitter.com/ArtGroveStudio/">
+          <div class="icon twitter"></div></a><a href="https://www.behance.net/art_grove_studio/">
+          <div class="icon behance"></div></a></div>
+    </div>
+    <div class="nav-mobile">
+      <div class="logo"><a href="http://artgrovestudio.com">
+          <h1>ag.studio</h1></a></div>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="nav-elements"><a href="http://artgrovestudio.com">
+          <p>Главная</p></a><a href="about.html">
+          <p>О нас</p></a><a href="project.html">
+          <p>Работы</p></a><a href="contact.html">
+          <p>Контакты</p></a></div>
+      <div class="footer"><a href="https://www.instagram.com/art.grove.studio/">
+          <div class="icon instagram"></div></a><a href="https://twitter.com/ArtGroveStudio/">
+          <div class="icon twitter"></div></a><a href="https://www.behance.net/art_grove_studio/">
+          <div class="icon behance"></div></a></div>
+    </div>
+    <div id="content"><a class="btn-line contact" href="project.html">
+        <p>портфолио</p></a>
+      <div class="arrow-next"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAZ0lEQVR4Ae3MMQ4CIRgF4Yn2JHBEzqUWnsflSLBhazYZWvNP+14+ov2i6EnirsTDM19+ZFYVGh9LvRmMSS2Zub1QVfp1P8hLplNhlyqCUVSjCMZSgnGUYBwlGEMJxlKCkVQliqJ/6wSw0UNZdSsg1gAAAABJRU5ErkJggg=="></div>
+      <div id="pagepiling">
+        <div class="section" id="header">
+          <div class="bg-block"></div>
+          <div class="darken"></div>
+          <h2>Art Grove Studio</h2>
+        </div>
+      </div>
+    </div>
+    <!-- GSAP-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineMax.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
